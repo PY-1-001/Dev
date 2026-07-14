@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "899bf506-82a4-407e-9938-4dc3854a0bf4",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "EquipmentId",
+        "targetPropertyId": "4571361449606525332"
+      },
+      {
+        "sourceColumnName": "PatientId",
+        "targetPropertyId": "4571361514949024198"
+      },
+      {
+        "sourceColumnName": "RoomId",
+        "targetPropertyId": "4571361546740639659"
+      },
+      {
+        "sourceColumnName": "EquipmentType",
+        "targetPropertyId": "4571361571527670609"
+      },
+      {
+        "sourceColumnName": "MonitoringStartDate",
+        "targetPropertyId": "4571361603300631002"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "6fcd7131-7be1-4989-ad28-167c7551b373",
+      "itemId": "10beba16-4db0-4067-9d6a-2b84b102e85b",
+      "sourceTableName": "vitalsignequipment",
+      "sourceSchema": null
+    }
+  }
+}

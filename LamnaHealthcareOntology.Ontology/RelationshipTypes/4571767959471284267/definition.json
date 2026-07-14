@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "4571767959471284267",
+  "name": "departments_has_hospitals",
+  "namespaceType": "Imported",
+  "source": {
+    "entityTypeId": "164901887812021"
+  },
+  "target": {
+    "entityTypeId": "219771974549685"
+  }
+}

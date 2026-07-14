@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/contextualization/1.0.0/schema.json",
+  "id": "40aeb667-430e-430c-bfad-c79140867293",
+  "dataBindingTable": {
+    "workspaceId": "6fcd7131-7be1-4989-ad28-167c7551b373",
+    "itemId": "10beba16-4db0-4067-9d6a-2b84b102e85b",
+    "sourceTableName": "patients",
+    "sourceSchema": null,
+    "sourceType": "LakehouseTable"
+  },
+  "sourceKeyRefBindings": [
+    {
+      "sourceColumnName": "PatientId",
+      "targetPropertyId": "4571361795434711786"
+    }
+  ],
+  "targetKeyRefBindings": [
+    {
+      "sourceColumnName": "CurrentRoomId",
+      "targetPropertyId": "4571362414490136483"
+    }
+  ]
+}

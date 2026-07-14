@@ -1,0 +1,68 @@
+table patients
+	lineageTag: adba21d6-b2fa-43e5-90f9-1d825754428b
+	sourceLineageTag: [dbo].[patients]
+
+	column PatientId
+		dataType: int64
+		formatString: 0
+		lineageTag: 79d9457a-6088-4be6-9eb9-dbfbbcae79ba
+		sourceLineageTag: PatientId
+		summarizeBy: none
+		sourceColumn: PatientId
+
+		annotation SummarizationSetBy = Automatic
+
+	column FirstName
+		dataType: string
+		lineageTag: 25d37462-b6a6-443e-8c49-99630e90539a
+		sourceLineageTag: FirstName
+		summarizeBy: none
+		sourceColumn: FirstName
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastName
+		dataType: string
+		lineageTag: 834306ff-6b7d-4da7-9cb0-8d7f029acd96
+		sourceLineageTag: LastName
+		summarizeBy: none
+		sourceColumn: LastName
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateOfBirth
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 23bfb4bc-bdfc-4c46-9b1b-c9d84f9075f7
+		sourceLineageTag: DateOfBirth
+		summarizeBy: none
+		sourceColumn: DateOfBirth
+
+		annotation SummarizationSetBy = Automatic
+
+	column AdmissionDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 5a29f703-16a3-455f-aacd-46c11c8fb386
+		sourceLineageTag: AdmissionDate
+		summarizeBy: none
+		sourceColumn: AdmissionDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrentRoomId
+		dataType: int64
+		formatString: 0
+		lineageTag: 8933a264-cd03-4297-8241-7bf752c1f21b
+		sourceLineageTag: CurrentRoomId
+		summarizeBy: none
+		sourceColumn: CurrentRoomId
+
+		annotation SummarizationSetBy = Automatic
+
+	partition patients = entity
+		mode: directLake
+		source
+			entityName: patients
+			expressionSource: 'DirectLake - onto_m'
+

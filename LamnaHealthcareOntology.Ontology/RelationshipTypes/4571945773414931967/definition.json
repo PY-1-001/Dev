@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "4571945773414931967",
+  "name": "vitalsignequipment_has_patients",
+  "namespaceType": "Imported",
+  "source": {
+    "entityTypeId": "45878232135045"
+  },
+  "target": {
+    "entityTypeId": "112532967424833"
+  }
+}

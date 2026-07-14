@@ -1,0 +1,48 @@
+table rooms
+	lineageTag: f41655d2-216a-4f1c-a40f-4ddb9b3ea096
+	sourceLineageTag: [dbo].[rooms]
+
+	column RoomId
+		dataType: int64
+		formatString: 0
+		lineageTag: c064923e-ec40-4e0a-91ee-fc439fc029d3
+		sourceLineageTag: RoomId
+		summarizeBy: none
+		sourceColumn: RoomId
+
+		annotation SummarizationSetBy = Automatic
+
+	column RoomNumber
+		dataType: string
+		lineageTag: a142a7df-88fd-4f47-91fb-8db42dc6ccfc
+		sourceLineageTag: RoomNumber
+		summarizeBy: none
+		sourceColumn: RoomNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column DepartmentId
+		dataType: int64
+		formatString: 0
+		lineageTag: bcd94200-f511-496d-864b-989487019eb3
+		sourceLineageTag: DepartmentId
+		summarizeBy: none
+		sourceColumn: DepartmentId
+
+		annotation SummarizationSetBy = Automatic
+
+	column RoomType
+		dataType: string
+		lineageTag: 6876dbbe-0d50-4919-bd2d-868212ac33f1
+		sourceLineageTag: RoomType
+		summarizeBy: none
+		sourceColumn: RoomType
+
+		annotation SummarizationSetBy = Automatic
+
+	partition rooms = entity
+		mode: directLake
+		source
+			entityName: rooms
+			expressionSource: 'DirectLake - onto_m'
+

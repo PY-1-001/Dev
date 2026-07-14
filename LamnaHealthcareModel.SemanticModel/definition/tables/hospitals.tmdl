@@ -1,0 +1,47 @@
+table hospitals
+	lineageTag: d9862053-dc9d-47f2-b9de-17da89c915ac
+	sourceLineageTag: [dbo].[hospitals]
+
+	column HospitalId
+		dataType: int64
+		formatString: 0
+		lineageTag: bfff2d1f-1287-4090-888c-0e4799184069
+		sourceLineageTag: HospitalId
+		summarizeBy: none
+		sourceColumn: HospitalId
+
+		annotation SummarizationSetBy = Automatic
+
+	column HospitalName
+		dataType: string
+		lineageTag: f78406d9-85cc-4984-a0ea-d7533e348585
+		sourceLineageTag: HospitalName
+		summarizeBy: none
+		sourceColumn: HospitalName
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		lineageTag: 906586f0-7dcf-4c24-92c8-0804240d1f19
+		sourceLineageTag: City
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column State
+		dataType: string
+		lineageTag: 04eaf029-9d7a-457e-8074-961f6c474d7a
+		sourceLineageTag: State
+		summarizeBy: none
+		sourceColumn: State
+
+		annotation SummarizationSetBy = Automatic
+
+	partition hospitals = entity
+		mode: directLake
+		source
+			entityName: hospitals
+			expressionSource: 'DirectLake - onto_m'
+

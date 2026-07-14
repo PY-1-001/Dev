@@ -1,0 +1,9 @@
+// KQL script
+// Use management commands in this script to configure your database items, such as tables, functions, materialized views, and more.
+
+
+.create-merge table VitalSignsReadings (ReadingId:string, EquipmentId:string, Timestamp:datetime, HeartRate:long, OxygenSaturation:long, RespiratoryRate:long) 
+.create-or-alter table VitalSignsReadings ingestion csv mapping 'VitalSignsReadings_mapping'
+```
+[{"Properties":{"Ordinal":"0"},"column":"ReadingId","datatype":""},{"Properties":{"Ordinal":"1"},"column":"EquipmentId","datatype":""},{"Properties":{"Ordinal":"2"},"column":"Timestamp","datatype":""},{"Properties":{"Ordinal":"3"},"column":"HeartRate","datatype":""},{"Properties":{"Ordinal":"4"},"column":"OxygenSaturation","datatype":""},{"Properties":{"Ordinal":"5"},"column":"RespiratoryRate","datatype":""}]
+```

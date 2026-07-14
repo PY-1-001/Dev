@@ -1,11 +1,11 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
   "metadata": {
-    "type": "Lakehouse",
-    "displayName": "lakehouse01"
+    "type": "Ontology",
+    "displayName": "LamnaHealthcareOntology"
   },
   "config": {
     "version": "2.0",
-    "logicalId": "b178c0e0-0631-bb78-45ae-4cbd0c640797"
+    "logicalId": "68e9e95b-a66e-8fb4-4257-6fb7f0c3c049"
   }
 }

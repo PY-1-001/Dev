@@ -1,0 +1,49 @@
+table departments
+	lineageTag: a3567cee-e0fd-48b8-97eb-e67cbbf0fe37
+	sourceLineageTag: [dbo].[departments]
+
+	column DepartmentId
+		dataType: int64
+		formatString: 0
+		lineageTag: bcd0662b-6565-434d-b391-6137805434e8
+		sourceLineageTag: DepartmentId
+		summarizeBy: none
+		sourceColumn: DepartmentId
+
+		annotation SummarizationSetBy = Automatic
+
+	column DepartmentName
+		dataType: string
+		lineageTag: 0bacc296-0df8-4a2b-9cdc-f03178597888
+		sourceLineageTag: DepartmentName
+		summarizeBy: none
+		sourceColumn: DepartmentName
+
+		annotation SummarizationSetBy = Automatic
+
+	column HospitalId
+		dataType: int64
+		formatString: 0
+		lineageTag: 00c7a475-69c6-472c-ac35-e3fa446dd660
+		sourceLineageTag: HospitalId
+		summarizeBy: none
+		sourceColumn: HospitalId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Floor
+		dataType: int64
+		formatString: 0
+		lineageTag: 0e281a34-a965-44ac-a034-b81d42c4307a
+		sourceLineageTag: Floor
+		summarizeBy: sum
+		sourceColumn: Floor
+
+		annotation SummarizationSetBy = Automatic
+
+	partition departments = entity
+		mode: directLake
+		source
+			entityName: departments
+			expressionSource: 'DirectLake - onto_m'
+

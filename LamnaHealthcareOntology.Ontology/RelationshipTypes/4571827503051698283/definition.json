@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "4571827503051698283",
+  "name": "rooms_has_departments",
+  "namespaceType": "Imported",
+  "source": {
+    "entityTypeId": "276215377318315"
+  },
+  "target": {
+    "entityTypeId": "164901887812021"
+  }
+}
