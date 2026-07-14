@@ -1,0 +1,58 @@
+table vitalsignequipment
+	lineageTag: 0638d745-6b00-42eb-86f1-8e7493589fae
+	sourceLineageTag: [dbo].[vitalsignequipment]
+
+	column EquipmentId
+		dataType: string
+		lineageTag: b422f75b-777b-4426-a782-5146e0752f8f
+		sourceLineageTag: EquipmentId
+		summarizeBy: none
+		sourceColumn: EquipmentId
+
+		annotation SummarizationSetBy = Automatic
+
+	column PatientId
+		dataType: int64
+		formatString: 0
+		lineageTag: b51f8be7-14da-4482-882c-871fff7dae5f
+		sourceLineageTag: PatientId
+		summarizeBy: none
+		sourceColumn: PatientId
+
+		annotation SummarizationSetBy = Automatic
+
+	column RoomId
+		dataType: int64
+		formatString: 0
+		lineageTag: f53cf2da-9ff7-4ba6-acbc-6b5bec567ba9
+		sourceLineageTag: RoomId
+		summarizeBy: count
+		sourceColumn: RoomId
+
+		annotation SummarizationSetBy = Automatic
+
+	column EquipmentType
+		dataType: string
+		lineageTag: 1b4e8e67-e1ab-4564-9dc4-f1e7bc92e8e0
+		sourceLineageTag: EquipmentType
+		summarizeBy: none
+		sourceColumn: EquipmentType
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonitoringStartDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: fb92f5df-a4e8-4920-b7f0-853a604933d5
+		sourceLineageTag: MonitoringStartDate
+		summarizeBy: none
+		sourceColumn: MonitoringStartDate
+
+		annotation SummarizationSetBy = Automatic
+
+	partition vitalsignequipment = entity
+		mode: directLake
+		source
+			entityName: vitalsignequipment
+			expressionSource: 'DirectLake - LamnaHealthcareLH'
+

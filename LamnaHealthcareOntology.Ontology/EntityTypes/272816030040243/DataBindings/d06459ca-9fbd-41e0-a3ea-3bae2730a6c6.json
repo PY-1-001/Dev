@@ -1,0 +1,32 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "d06459ca-9fbd-41e0-a3ea-3bae2730a6c6",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "HospitalId",
+        "targetPropertyId": "6858910601186546517"
+      },
+      {
+        "sourceColumnName": "HospitalName",
+        "targetPropertyId": "6858910625127065410"
+      },
+      {
+        "sourceColumnName": "City",
+        "targetPropertyId": "6858910651681341550"
+      },
+      {
+        "sourceColumnName": "State",
+        "targetPropertyId": "6858910673466261755"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "1e276bcb-73ff-405c-a289-3bcc38675300",
+      "itemId": "7778128f-0c51-4f7d-bdc8-445dfe27f83b",
+      "sourceTableName": "hospitals",
+      "sourceSchema": null
+    }
+  }
+}

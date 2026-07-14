@@ -1,0 +1,48 @@
+table rooms
+	lineageTag: 8d9b6d25-0c17-4596-994a-996237049794
+	sourceLineageTag: [dbo].[rooms]
+
+	column RoomId
+		dataType: int64
+		formatString: 0
+		lineageTag: 25dd2988-4b9f-4248-8f36-95dd5a583351
+		sourceLineageTag: RoomId
+		summarizeBy: none
+		sourceColumn: RoomId
+
+		annotation SummarizationSetBy = Automatic
+
+	column RoomNumber
+		dataType: string
+		lineageTag: 516079b3-9135-4800-ac19-b2e499e6698b
+		sourceLineageTag: RoomNumber
+		summarizeBy: none
+		sourceColumn: RoomNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column DepartmentId
+		dataType: int64
+		formatString: 0
+		lineageTag: c1046fbf-dccc-44c4-9636-5b42fd8f9675
+		sourceLineageTag: DepartmentId
+		summarizeBy: none
+		sourceColumn: DepartmentId
+
+		annotation SummarizationSetBy = Automatic
+
+	column RoomType
+		dataType: string
+		lineageTag: 14d64f29-e8a5-4746-9c7f-e0c598c35ad7
+		sourceLineageTag: RoomType
+		summarizeBy: none
+		sourceColumn: RoomType
+
+		annotation SummarizationSetBy = Automatic
+
+	partition rooms = entity
+		mode: directLake
+		source
+			entityName: rooms
+			expressionSource: 'DirectLake - LamnaHealthcareLH'
+

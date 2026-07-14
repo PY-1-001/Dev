@@ -1,0 +1,9 @@
+expression 'DirectLake - LamnaHealthcareLH' =
+		let
+		    Source = AzureStorage.DataLake("https://onelake.dfs.fabric.microsoft.com/1e276bcb-73ff-405c-a289-3bcc38675300/7778128f-0c51-4f7d-bdc8-445dfe27f83b", [HierarchicalNavigation=true])
+		in
+		    Source
+	lineageTag: 45eb94d6-abae-4f5b-b1db-bc6d09100ff4
+
+	annotation PBI_IncludeFutureArtifacts = False
+

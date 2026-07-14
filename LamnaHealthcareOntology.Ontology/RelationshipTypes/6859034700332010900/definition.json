@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "6859034700332010900",
+  "name": "patients_has_rooms",
+  "namespaceType": "Imported",
+  "source": {
+    "entityTypeId": "241327925080034"
+  },
+  "target": {
+    "entityTypeId": "3842806536243"
+  }
+}

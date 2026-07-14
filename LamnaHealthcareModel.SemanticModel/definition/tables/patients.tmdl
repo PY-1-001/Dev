@@ -1,0 +1,68 @@
+table patients
+	lineageTag: 7e33248b-fcce-4d09-9539-41e17536c1e0
+	sourceLineageTag: [dbo].[patients]
+
+	column PatientId
+		dataType: int64
+		formatString: 0
+		lineageTag: d5318b1c-9ced-46e6-afc6-5bfd2875d92f
+		sourceLineageTag: PatientId
+		summarizeBy: none
+		sourceColumn: PatientId
+
+		annotation SummarizationSetBy = Automatic
+
+	column FirstName
+		dataType: string
+		lineageTag: 61a8a596-7cda-4a1d-85a1-a08c3948affd
+		sourceLineageTag: FirstName
+		summarizeBy: none
+		sourceColumn: FirstName
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastName
+		dataType: string
+		lineageTag: f7d8049c-eed6-468e-aa09-3c13b1d0a281
+		sourceLineageTag: LastName
+		summarizeBy: none
+		sourceColumn: LastName
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateOfBirth
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 6c5892df-0814-4540-a113-1af85482ce1a
+		sourceLineageTag: DateOfBirth
+		summarizeBy: none
+		sourceColumn: DateOfBirth
+
+		annotation SummarizationSetBy = Automatic
+
+	column AdmissionDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 926a191e-aabb-4162-9b6f-d9db2bd75a07
+		sourceLineageTag: AdmissionDate
+		summarizeBy: none
+		sourceColumn: AdmissionDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrentRoomId
+		dataType: int64
+		formatString: 0
+		lineageTag: 3f29667f-b629-49be-a813-241847bce684
+		sourceLineageTag: CurrentRoomId
+		summarizeBy: none
+		sourceColumn: CurrentRoomId
+
+		annotation SummarizationSetBy = Automatic
+
+	partition patients = entity
+		mode: directLake
+		source
+			entityName: patients
+			expressionSource: 'DirectLake - LamnaHealthcareLH'
+

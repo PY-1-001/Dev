@@ -1,0 +1,47 @@
+table hospitals
+	lineageTag: a100ed02-73d2-4748-8c3c-acf8089273b5
+	sourceLineageTag: [dbo].[hospitals]
+
+	column HospitalId
+		dataType: int64
+		formatString: 0
+		lineageTag: ba52beb1-f418-478e-9285-62abfb7b67aa
+		sourceLineageTag: HospitalId
+		summarizeBy: none
+		sourceColumn: HospitalId
+
+		annotation SummarizationSetBy = Automatic
+
+	column HospitalName
+		dataType: string
+		lineageTag: 0f89d65e-b668-4765-8a26-079b2d502d93
+		sourceLineageTag: HospitalName
+		summarizeBy: none
+		sourceColumn: HospitalName
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		lineageTag: 0273d2d0-c57e-41e2-8b5f-88ffeab87d98
+		sourceLineageTag: City
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column State
+		dataType: string
+		lineageTag: 87ddf4d8-a16a-41ff-9852-6d63707280a2
+		sourceLineageTag: State
+		summarizeBy: none
+		sourceColumn: State
+
+		annotation SummarizationSetBy = Automatic
+
+	partition hospitals = entity
+		mode: directLake
+		source
+			entityName: hospitals
+			expressionSource: 'DirectLake - LamnaHealthcareLH'
+

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "bf18c2ab-ef87-428d-8c59-3441f5ec9b57",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "DepartmentId",
+        "targetPropertyId": "6858910481256672646"
+      },
+      {
+        "sourceColumnName": "DepartmentName",
+        "targetPropertyId": "6858910509192935463"
+      },
+      {
+        "sourceColumnName": "HospitalId",
+        "targetPropertyId": "6858910528969750253"
+      },
+      {
+        "sourceColumnName": "Floor",
+        "targetPropertyId": "6858910549500456211"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "1e276bcb-73ff-405c-a289-3bcc38675300",
+      "itemId": "7778128f-0c51-4f7d-bdc8-445dfe27f83b",
+      "sourceTableName": "departments",
+      "sourceSchema": null
+    }
+  }
+}

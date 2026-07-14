@@ -1,0 +1,49 @@
+table departments
+	lineageTag: 076a2159-e01e-4f5d-b489-25f2ba5c9c75
+	sourceLineageTag: [dbo].[departments]
+
+	column DepartmentId
+		dataType: int64
+		formatString: 0
+		lineageTag: f05f5008-16d7-4606-b772-d5be3e26ffec
+		sourceLineageTag: DepartmentId
+		summarizeBy: none
+		sourceColumn: DepartmentId
+
+		annotation SummarizationSetBy = Automatic
+
+	column DepartmentName
+		dataType: string
+		lineageTag: f7867843-c39c-4418-8ee4-4ebf101208c6
+		sourceLineageTag: DepartmentName
+		summarizeBy: none
+		sourceColumn: DepartmentName
+
+		annotation SummarizationSetBy = Automatic
+
+	column HospitalId
+		dataType: int64
+		formatString: 0
+		lineageTag: 6099ffe7-9768-4f3a-9f47-146f71176f38
+		sourceLineageTag: HospitalId
+		summarizeBy: none
+		sourceColumn: HospitalId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Floor
+		dataType: int64
+		formatString: 0
+		lineageTag: 11ad0202-00af-47b6-90e4-796cd31768d9
+		sourceLineageTag: Floor
+		summarizeBy: sum
+		sourceColumn: Floor
+
+		annotation SummarizationSetBy = Automatic
+
+	partition departments = entity
+		mode: directLake
+		source
+			entityName: departments
+			expressionSource: 'DirectLake - LamnaHealthcareLH'
+

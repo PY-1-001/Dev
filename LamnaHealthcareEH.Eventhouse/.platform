@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Eventhouse",
+    "displayName": "LamnaHealthcareEH",
+    "description": "LamnaHealthcareEH"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "4a415e6f-5f43-aa80-45ae-41d8885cc69c"
+  }
+}
